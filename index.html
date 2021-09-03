@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flowers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            background-color: #fdfdfd;
+            box-sizing: border-box;
+        }
+        
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+        
+        h3 {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-family: montserat;
+            color: rgb(241, 34, 248);
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+        }
+        
+        .loader {
+            position: absolute;
+            left: 0;
+            top: 80px;
+            width: 400px;
+            height: 10px;
+            border-radius: 50px;
+            background: rgb(219, 213, 213);
+        }
+        
+        .bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 10px;
+            border-radius: 50px;
+            background: rgb(241, 34, 248);
+        }
+        
+        .blink {
+            animation: blinks 0.3s ease-in-out 0.4s;
+        }
+        
+        @keyframes blinks {
+            0% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h3>W</h3>
+        <h3>e</h3>
+        <h3>l</h3>
+        <h3>c</h3>
+        <h3>o</h3>
+        <h3>m</h3>
+        <h3>e</h3>
+
+        <div class="loader">
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+    <script>
+        const bar = document.querySelector('.bar')
+
+        let text = document.getElementsByTagName('h3')
+        console.log(text)
+        let per = 16
+
+        let loading = setInterval(animate, 50)
+
+        function animate() {
+            if (per == 400) {
+                location.href = 'home.html'
+                clearInterval(loading)
+            } else {
+                per = per + 4
+
+                bar.style.width = per + 'px'
+            }
+        }
+    </script>
+</body>
+
+</html>
