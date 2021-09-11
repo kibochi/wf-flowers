@@ -397,7 +397,7 @@ a.btn:hover {
     font-family: montserrat;
 }
 
-.about-us a.btn1 {
+a.btn1 {
     display: inline-block;
     max-width: 500px;
     width: 50%;
@@ -412,10 +412,10 @@ a.btn:hover {
     border: 1px solid black;
     text-align: center;
     font-weight: bolder;
-    transition: background 0.4s, color 0.4s ease-in-out;
+    transition: background 0.6s, color 0.4s ease-in-out;
 }
 
-.about-us a.btn1:hover {
+a.btn1:hover {
     background: white;
     color: black;
 }
@@ -432,39 +432,25 @@ a.btn:hover {
 .our-community {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.community-gallery {
-    display: flex;
+    gap: 50px;
 }
 
 .gallery {
-    max-width: 100%;
-    width: 600px;
-    min-height: 600px;
+    max-width: 700px;
 }
 
-.gallery img {
+.big-image img,
+.small-images img {
     width: 100%;
-    height: 600px;
+    border: 2px solid rgb(100, 100, 100);
 }
 
-.thumbnails-gallery {
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    min-height: 300px;
-    object-fit: cover;
-}
-
-.thumbnail img {
-    max-width: 100%;
-    width: 200px;
-    height: 138px;
-    margin: 0 5px;
-    border: 1px solid black;
+.small-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 3px;
+    gap: 3px;
+    cursor: pointer;
 }
 
 .contacts-image {
