@@ -8,7 +8,6 @@ const big_image = document.querySelector('.big-image img')
 const small_images = document.querySelectorAll('.small-images img')
 
 small_images.forEach((img) => img.addEventListener('click', showImage))
-small_images[0].style.opacity = opacity
 
 function showImage(e) {
     big_image.src = e.target.src
@@ -42,3 +41,23 @@ function footerDate() {
     span.textContent = currentYear
 }
 footerDate()
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    effect: 'fade',
+    speed: 1500,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+swiper.on('slideChangeTransitionStart', function() {
+    anime({
+        targets: '.swiper-slide-active .right img',
+        scale: [1.2, 1],
+        opacity: [0, 1],
+        easing: 'easeInOutQuart',
+    })
+})
