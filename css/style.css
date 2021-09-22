@@ -20,15 +20,15 @@ header {
 header .logo {
     position: fixed;
     top: 20px;
-    left: 50px;
+    left: 180px;
     font-family: charmonman;
     z-index: 9999;
 }
 
 header .logo a {
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .nav {
@@ -50,7 +50,7 @@ header .logo a {
 
 .nav-links li a {
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 20px;
     font-weight: 700;
 }
@@ -71,23 +71,159 @@ header .logo a {
     font-family: charmonman;
 } */
 
-a.btn {
-    background: -webkit-linear-gradient(0deg, transparent 50%, #efa0bd);
+.carousel .carousel-item {
+    height: 100vh;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+}
+
+.carousel-item video {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.caption-one,
+.caption-two,
+.caption-three,
+.caption-four {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: 0 20px 0 20px;
+    color: black;
+    transition: 0.5s all ease-in;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.caption-one {
+    background: RGB(243, 173, 199);
+}
+
+.caption-three {
+    background: rgb(254, 255, 255);
+}
+
+.caption-two {
+    background: rgb(218, 218, 218);
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        display: block !important;
+    }
+}
+
+.carousel-caption h5 {
+    margin-top: 150px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.carousel-caption p {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.carousel-caption h2 {
+    margin-top: 5px;
+    font-weight: 700px;
+    font-size: 60px;
+    font-family: 'Libre Baskerville', serif;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.carousel-caption h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 5px solid rgb(0, 0, 0);
+    width: 50%;
+    margin: 0 auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: inherit;
+    bottom: 10%;
+    width: 80px !important;
+    height: 80px !important;
+    background-color: black;
+    color: white !important;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev {
+    left: 420px;
+}
+
+.carousel-control-next {
+    left: 330px;
+}
+
+.carousel-indicators button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.btn-one,
+.btn-two,
+.btn-three {
+    margin-top: 10px;
     border-radius: 5px;
     font-weight: 500;
     font-size: 20px;
-    padding: 12px;
+    padding: 10px;
     background-size: 400px 80px;
     transition: 0.8s;
     cursor: pointer;
     border: 1px solid black;
 }
 
+.btn-one {
+    background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(255, 138, 181));
+}
+
+.btn-two {
+    background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(224, 224, 224));
+}
+
+.btn-three {
+    background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(238, 238, 238));
+}
+
 a.flowers:hover {
     border: none !important;
 }
 
-a.btn:hover {
+.btn-one:hover,
+.btn-two:hover,
+.btn-three:hover {
     background-position: 200px 0;
 }
 
@@ -260,7 +396,8 @@ a.btn:hover {
     position: relative;
 }
 
-.btn2 {
+
+/* .btn2 {
     background: black;
     cursor: pointer;
     border-radius: 4px;
@@ -275,7 +412,7 @@ a.btn:hover {
 .btn2:hover {
     background: white;
     color: black;
-}
+} */
 
 .image-elem img {
     width: 100px;
