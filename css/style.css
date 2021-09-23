@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -53,6 +53,23 @@ header .logo a {
     font-size: 18px;
     margin-right: 20px;
     font-weight: 700;
+    position: relative;
+}
+
+.nav-links li a:hover {
+    transition: background-color 0.8s ease-in;
+}
+
+.nav-links li a:hover:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    left: -20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
 }
 
 
@@ -96,7 +113,8 @@ header .logo a {
 .caption-one,
 .caption-two,
 .caption-three,
-.caption-four {
+.caption-four,
+.caption-five {
     position: absolute;
     left: 0;
     top: 0;
@@ -106,23 +124,40 @@ header .logo a {
     color: black;
     transition: 0.5s all ease-in;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background 0.8s ease-in;
 }
 
 .caption-one {
     background: RGB(243, 173, 199);
 }
 
-.caption-three {
-    background: rgb(254, 255, 255);
-}
-
 .caption-two {
     background: rgb(218, 218, 218);
+}
+
+.caption-three {
+    background: rgba(254, 255, 255, 0.8);
+}
+
+.caption-four {
+    background: rgba(254, 255, 255, 0.8);
+}
+
+.caption-five {
+    background: rgba(254, 255, 255, 0.8);
 }
 
 @media (max-width: 768px) {
     .carousel-caption {
         display: block !important;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+    .carousel-indicators li {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -164,7 +199,8 @@ header .logo a {
 .carousel-control-prev,
 .carousel-control-next {
     top: inherit;
-    bottom: 13%;
+    left: 150px;
+    bottom: 10%;
     width: 80px !important;
     height: 80px !important;
     background-color: black;
@@ -178,32 +214,52 @@ header .logo a {
 }
 
 .carousel-control-prev {
-    left: 416px;
+    left: 240px !important;
 }
 
-.carousel-control-next {
-    left: 330px;
+.carousel-indicators {
+    bottom: 10px;
+    left: 0;
+    top: inherit;
 }
 
 .carousel-indicators button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.5) !important;
+    background: black !important;
+    color: black !important;
 }
 
 .btn-one,
 .btn-two,
-.btn-three {
+.btn-three,
+.btn-four,
+.btn-five {
     margin-top: 10px;
     border-radius: 5px;
     font-weight: 500;
     font-size: 20px;
-    padding: 10px;
+    padding: 15px;
+    width: auto;
     background-size: 400px 80px;
     transition: 0.8s;
     cursor: pointer;
     border: 1px solid black;
+    position: relative;
+}
+
+.btn-one::after,
+.btn-two::after,
+.btn-three::after,
+.btn-four::after,
+.btn-five::after {
+    content: '\f178';
+    font-family: 'FontAwesome';
+    font-weight: 400;
+    position: absolute;
+    left: 80%;
+    top: 26%;
+    right: 4%;
+    bottom: 0;
+    opacity: 0;
 }
 
 .btn-one {
@@ -218,14 +274,35 @@ header .logo a {
     background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(238, 238, 238));
 }
 
+.btn-four {
+    background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(238, 238, 238));
+}
+
+.btn-five {
+    background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(238, 238, 238));
+}
+
 a.flowers:hover {
     border: none !important;
 }
 
 .btn-one:hover,
 .btn-two:hover,
-.btn-three:hover {
+.btn-three:hover,
+.btn-four:hover,
+.btn-five:hover {
+    padding: 15px 40px 15px 15px;
     background-position: 200px 0;
+    transition: all 0.5s;
+}
+
+.btn-one:hover::after,
+.btn-two:hover::after,
+.btn-three:hover::after,
+.btn-four:hover::after,
+.btn-five:hover::after {
+    opacity: 1;
+    transition: all 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -808,6 +885,7 @@ a.btn1:hover {
 
 .community {
     overflow: hidden;
+    position: relative;
 }
 
 .our-community {
@@ -815,8 +893,21 @@ a.btn1:hover {
     gap: 50px;
 }
 
+.community-text h2 {
+    margin-top: 30px;
+    text-transform: none;
+}
+
+.community-text h5 {
+    margin-top: 40px;
+}
+
+.community-text ul {
+    margin-top: 10px;
+}
+
 .gallery {
-    max-width: 800px;
+    max-width: 760px;
 }
 
 .big-image img,
@@ -835,7 +926,7 @@ a.btn1:hover {
 
 .small-images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 3px;
     cursor: pointer;
 }
