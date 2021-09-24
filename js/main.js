@@ -8,7 +8,7 @@ const btn5 = document.querySelector('.btn-five')
 const btn_stop = document.querySelector('.btn-stop')
 const big_image = document.querySelector('.big-image img')
 const small_images = document.querySelectorAll('.small-images img')
-
+btn_stop.style.display = 'none'
 small_images.forEach((img) => img.addEventListener('click', showImage))
 
 function showImage(e) {
@@ -20,7 +20,6 @@ menu.addEventListener('click', () => {
     nav_links.classList.toggle('open')
 })
 
-btn_stop.style.display = 'none'
 btn5.addEventListener('click', () => {
     video.play()
     if (video.play()) {

@@ -101,7 +101,6 @@ header .logo a {
 }
 
 .carousel-item video {
-    background: transparent url('/images/9.jpg') 50% 50% / cover no-repeat;
     position: absolute;
     object-fit: inherit;
     top: 0;
@@ -178,7 +177,7 @@ header .logo a {
 .carousel-caption h2 {
     margin-top: 5px;
     font-weight: 700px;
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Libre Baskerville', serif;
     position: relative;
     display: inline-block;
@@ -230,6 +229,7 @@ header .logo a {
 
 .btn-one,
 .btn-two,
+.btn2,
 .btn-three,
 .btn-four,
 .btn-five {
@@ -237,7 +237,7 @@ header .logo a {
     border-radius: 5px;
     font-weight: 500;
     font-size: 20px;
-    padding: 15px;
+    padding: 12px;
     width: auto;
     background-size: 400px 80px;
     transition: 0.8s;
@@ -248,9 +248,9 @@ header .logo a {
 
 .btn-one::after,
 .btn-two::after,
+.btn2::after,
 .btn-three::after,
-.btn-four::after,
-.btn-five::after {
+.btn-four::after {
     content: '\f178';
     font-family: 'FontAwesome';
     font-weight: 400;
@@ -260,6 +260,66 @@ header .logo a {
     right: 4%;
     bottom: 0;
     opacity: 0;
+}
+
+.btn-five,
+.btn-stop {
+    width: 100px;
+    height: 100px;
+    border: none !important;
+    outline: none !important;
+    position: relative;
+    margin: 0 auto;
+}
+
+.btn-video {
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-five::before,
+.btn-five::after,
+.btn-stop::before,
+.btn-stop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.btn-five::before,
+.btn-stop::before {
+    content: '\f04b';
+    font-family: 'FontAwesome';
+    background: rgb(238, 238, 238);
+    font-size: 30px;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.btn-stop::before {
+    content: '\f04c';
+}
+
+.btn-five::after,
+.btn-stop::after {
+    background: rgb(255, 0, 0);
+    z-index: 1;
+    animation: pulse 1200ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
 
 .btn-one {
@@ -278,9 +338,10 @@ header .logo a {
     background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(238, 238, 238));
 }
 
-.btn-five {
-    background: -webkit-linear-gradient( 0deg, transparent 50%, rgb(238, 238, 238));
-}
+
+/* .btn-five {
+    background: -webkit-linear-gradient(0deg, transparent 50%, rgb(255, 0, 0));
+} */
 
 a.flowers:hover {
     border: none !important;
@@ -288,19 +349,19 @@ a.flowers:hover {
 
 .btn-one:hover,
 .btn-two:hover,
+.btn2:hover,
 .btn-three:hover,
-.btn-four:hover,
-.btn-five:hover {
-    padding: 15px 40px 15px 15px;
+.btn-four:hover {
+    padding: 12px 40px 12px 12px;
     background-position: 200px 0;
     transition: all 0.5s;
 }
 
 .btn-one:hover::after,
 .btn-two:hover::after,
+.btn2:hover::after,
 .btn-three:hover::after,
-.btn-four:hover::after,
-.btn-five:hover::after {
+.btn-four:hover::after {
     opacity: 1;
     transition: all 0.5s;
 }
@@ -365,69 +426,10 @@ a.flowers:hover {
     }
 }
 
-.landing {
-    background-image: url('/images/9.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    /* background-attachment: fixed; */
-}
-
-.wrapper {
-    position: absolute;
-    top: 45%;
-    left: 30%;
-    transform: translate(-30%, -45%);
-    text-align: center;
-    width: 100%;
-}
-
-.wrapper h1 {
-    font-size: 60px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.wrapper p {
-    font-size: 18px;
-    font-weight: 400;
-    font-family: montserrat;
-    margin-bottom: 20px;
-}
-
-.wrapper a {
-    font-weight: 500;
-}
-
-@media (max-width: 768px) {
-    .wrapper h1 {
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .wrapper {
-        width: 100%;
-    }
-    .wrapper h1 {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    .wrapper p {
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
-    a.cta,
-    .cta-comm {
-        margin-top: 20px;
-    }
-    .menu h1 {
-        display: none;
-    }
+.partners-cards {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 250px);
 }
 
 .our-flowers {
@@ -469,28 +471,10 @@ a.flowers:hover {
 
 .card-right a,
 .card-left a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 18px;
     position: relative;
 }
-
-
-/* .btn2 {
-    background: black;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 10px 12px;
-    margin: 10px;
-    border: 1px solid black;
-    text-align: center;
-    font-weight: bolder;
-    transition: background 0.6s, color 0.4s ease-in-out;
-}
-
-.btn2:hover {
-    background: white;
-    color: black;
-} */
 
 .image-elem img {
     width: 100px;
@@ -893,17 +877,24 @@ a.btn1:hover {
     gap: 50px;
 }
 
+.community-text {
+    margin-top: 70px;
+}
+
 .community-text h2 {
-    margin-top: 30px;
     text-transform: none;
 }
 
 .community-text h5 {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .community-text ul {
     margin-top: 10px;
+}
+
+.community-text ul li img {
+    width: 40px;
 }
 
 .gallery {
@@ -941,7 +932,7 @@ a.btn1:hover {
 }
 
 .contacts-image {
-    background: url('/images/2.jpg');
+    background: url('/images/Our-Farm-Slider-5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -960,13 +951,24 @@ a.btn1:hover {
 }
 
 .contact-box {
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
     padding: 20px;
 }
 
 .contact-box h4 {
-    font-weight: 700;
-    text-transform: capitalize;
+    position: relative;
+}
+
+.contact-box h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    left: 0;
+    border-bottom: 5px solid rgb(0, 0, 0);
+    width: 20%;
+    margin: 0 auto;
 }
 
 .social-cons {
@@ -999,6 +1001,7 @@ a.btn1:hover {
     box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px rgb(255 255 255);
     align-items: center;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
 .socials li i {
@@ -1006,8 +1009,8 @@ a.btn1:hover {
     font-size: 18px;
 }
 
-.socials li i:hover {
-    color: rgb(241, 34, 248);
+.socials li:hover {
+    background: rgb(199, 199, 199);
 }
 
 .map-box {
@@ -1062,6 +1065,10 @@ footer .top a i {
 .footer-text p {
     position: relative;
     margin: 10px;
+}
+
+.footer-text p a {
+    color: white;
 }
 
 
