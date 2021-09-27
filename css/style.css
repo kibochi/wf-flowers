@@ -21,7 +21,7 @@ header .logo {
     position: fixed;
     top: 20px;
     left: 180px;
-    font-family: charmonman;
+    font-family: 'Charmonman', cursive;
     z-index: 9999;
 }
 
