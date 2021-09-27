@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Work Sans', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -178,20 +178,19 @@ header .logo a {
     margin-top: 5px;
     font-weight: 700px;
     font-size: 50px;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Playfair Display', serif;
     position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
 }
 
-.carousel-caption h2::after {
+.carousel-caption h2::after,
+.title h1::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     right: 0;
     left: 0;
     border-bottom: 5px solid rgb(0, 0, 0);
-    width: 50%;
+    width: 40px;
     margin: 0 auto;
 }
 
@@ -416,20 +415,24 @@ a.flowers:hover {
         align-items: center;
         margin: 20px;
         color: rgb(0, 0, 0);
-        font-family: 'Libre Baskerville', serif;
+        font-family: 'Work Sans', sans-serif;
         font-weight: 600;
         font-size: 18px;
         transition: background 0.8s ease;
     }
-    .nav-links li a:hover {
-        border-bottom: 5px solid rgb(241, 34, 248);
-    }
+}
+
+.partners {
+    position: relative;
+    overflow: hidden;
 }
 
 .partners-cards {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(4, 250px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .our-flowers {
@@ -460,7 +463,7 @@ a.flowers:hover {
 .text-elem {
     font-size: 25px;
     font-weight: 600;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .card-left p,
@@ -480,269 +483,34 @@ a.flowers:hover {
     width: 100px;
 }
 
-.swiper {
-    max-width: 100%;
-    min-height: 100vh;
-}
-
-.swiper-slide {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-}
-
-.left {
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(136, 136, 136, 0.35) 0px 5px 15px;
-    margin-top: 100px;
-    padding: 50px;
-    z-index: 100;
-    max-width: 100%;
-    /* min-height: calc(100vh - 100px); */
-    text-align: center;
-}
-
-.left h3 {
-    font-size: 50px;
-    font-weight: 700;
-    position: relative;
-}
-
-.left h3::before,
-.left h3::after {
-    display: inline-block;
-    content: '';
-    border-top: 2px solid black;
-    width: 70px;
-    transform: translateY(-10px);
-}
-
-.left p {
-    margin-top: 50px;
-    font-size: 18px;
-    font-family: montserrat;
-    text-align: justify;
-}
-
-.right {
-    float: right;
-    margin-left: -200px;
-}
-
-.right img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    width: 80px !important;
-    height: 80px !important;
-    background-color: black;
-    color: white !important;
-    top: inherit !important;
-    bottom: 36px !important;
-}
-
-.swiper-button-next {
-    left: 296px !important;
-}
-
-.swiper-button-prev {
-    left: 200px !important;
-}
-
-@media (min-width: 900px) and (max-width: 1000px) {
-    .swiper-button-next {
-        left: 240px !important;
-    }
-    .swiper-button-prev {
-        left: 150px !important;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 900px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 60px;
-        height: 60px;
-        bottom: 0px !important;
-    }
-    .swiper-button-next {
-        left: 190px !important;
-    }
-    .swiper-button-prev {
-        left: 100px !important;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 800px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 60px !important;
-        height: 60px !important;
-        bottom: 0px !important;
-    }
-    .swiper-button-next {
-        left: 180px !important;
-    }
-    .swiper-button-prev {
-        left: 100px !important;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 700px) {
-    .left {
-        margin-top: 0px;
-    }
-    .left h3 {
-        font-size: 30px;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 60px !important;
-        height: 60px !important;
-        bottom: 0px !important;
-    }
-    .swiper-button-next {
-        left: 140px !important;
-    }
-    .swiper-button-prev {
-        left: 70px !important;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 600px) {
-    .left {
-        margin-top: 0px;
-    }
-    .left h3 {
-        font-size: 20px;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 60px !important;
-        height: 60px !important;
-        bottom: 0px !important;
-    }
-    .swiper-button-next {
-        left: 140px !important;
-    }
-    .swiper-button-prev {
-        left: 70px !important;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 500px) {
-    .left {
-        margin-top: 0px;
-    }
-    .left h3 {
-        font-size: 30px;
-    }
-    .right {
-        display: none;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        width: 60px !important;
-        height: 60px !important;
-        bottom: 0px !important;
-    }
-    .swiper-button-next {
-        left: 140px !important;
-    }
-    .swiper-button-prev {
-        left: 70px !important;
-    }
-}
-
-
-/*
-.images {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.images img {
-    width: 400px;
-}
-
-.roses,
-.hypers {
-    position: relative;
-}
-
-.images-text {
-    position: absolute;
-    background: rgba(215, 215, 215, 0.5);
-    padding: 20px;
-    color: black;
-    min-width: 100%;
-    min-height: 240px;
-    transition: background 0.4s ease-in-out;
-}
-
-.images-text:hover {
-    background: rgb(226, 225, 225);
-}
-
-.text-one {
-    top: 5%;
-    left: 30%;
-}
-
-.text-two {
-    bottom: 5%;
-    right: 30%;
-} */
-
-.title {}
-
 .title h1 {
-    font-size: 40px;
-    font-weight: 500;
-    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'work sans', serif;
     color: rgba(179, 179, 179, 0.5);
-    margin-bottom: 20px;
-    width: 20px;
     position: relative;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .title h2 {
     font-size: 30px;
-    font-weight: 700;
-    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
     margin-bottom: 20px;
     text-transform: capitalize;
 }
 
 .title-small {
     font-size: 20px;
-    font-weight: 500;
-    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-family: 'Work Sans', sans-serif;
     text-transform: capitalize;
 }
 
-
-/* .title h1::after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 33%;
-    left: 5%;
-    transform: translate(-50%, -33%) rotate(90deg);
-    width: 50px;
-    height: 5px;
-    background: black;
-} */
-
 .title p {
     font-size: 18px;
-    font-family: montserrat;
+    font-family: 'Work Sans', sans-serif;
 }
 
 @media (max-width: 992px) {
@@ -789,9 +557,10 @@ a.flowers:hover {
     }
 }
 
-.about-us {
+.about {
     position: relative;
     overflow: hidden;
+    margin-top: 100px;
 }
 
 .values {
@@ -832,7 +601,7 @@ a.flowers:hover {
 .value .text {
     color: rgb(0, 0, 0);
     font-size: 15px;
-    font-family: montserrat;
+    font-family: 'Work Sans', sans-serif;
 }
 
 a.btn1 {
@@ -874,7 +643,7 @@ a.btn1:hover {
 
 .our-community {
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 .community-text {
@@ -898,7 +667,7 @@ a.btn1:hover {
 }
 
 .gallery {
-    max-width: 760px;
+    max-width: 800px;
 }
 
 .big-image img,
