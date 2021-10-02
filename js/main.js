@@ -8,12 +8,20 @@ const btn5 = document.querySelector('.btn-five')
 const btn_stop = document.querySelector('.btn-stop')
 const big_image = document.querySelector('.big-image img')
 const small_images = document.querySelectorAll('.small-images img')
+const preloader = document.querySelector('.preloader')
+
+window.addEventListener('load', () => {
+    preloader.classList.add('loaded')
+})
+
 btn_stop.style.display = 'none'
 small_images.forEach((img) => img.addEventListener('click', showImage))
 
 function showImage(e) {
     big_image.src = e.target.src
     small_images.forEach((img) => (img.style.opacity = 1))
+
+    e.target.style.opacity = opacity
 }
 
 menu.addEventListener('click', () => {
