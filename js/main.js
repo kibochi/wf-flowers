@@ -66,3 +66,18 @@ function footerDate() {
     span.textContent = currentYear
 }
 footerDate()
+
+PageTransition = () => {
+    let timeline = gsap.timeline()
+
+    timeline.to('header', {
+        zIndex: 1,
+    })
+
+    timeline.to('preloader', {
+        duration: 1,
+        height: '100%',
+        top: '0%',
+    })
+}
+PageTransition()

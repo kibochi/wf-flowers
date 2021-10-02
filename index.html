@@ -23,99 +23,98 @@
 
 </head>
 
-<body data-barba="wrapper">
+<body>
 
     <div class="preloader">
         <img src="/images/logo.png">
     </div>
 
-    <main data-barba="container" data-barba-namespace="index">
-        <!--start navbar-->
-        <header>
-            <div class="logo">
-                <a href="#" class="logo">Wf Flowers</a>
+
+    <!--start navbar-->
+    <header>
+        <div class="logo">
+            <a href="#" class="logo">Wf Flowers</a>
+        </div>
+
+
+
+        <nav class="nav fixed-top ">
+            <div class="menu">
+                <div class="menu-btn"></div>
             </div>
 
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="farm.html">Our Farm</a></li>
+            </ul>
+        </nav>
+        <!--end navbar-->
+    </header>
 
 
-            <nav class="nav fixed-top ">
-                <div class="menu">
-                    <div class="menu-btn"></div>
+    <!--landing background-->
+    <section class="landing" id="home">
+
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/9.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption caption-one d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
+                        <h5><big>01</big>/<small>05</small></h5>
+                        <h2>Flowers</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis iure mollitia aspernatur quaerat? Nam excepturi neque eos nulla asperiores ea eaque. Fugit et aperiam nostrum voluptates, illo odio incidunt.
+                        </p>
+                        <a href="farm.html" class="btn btn-one">Read More</a>
+                    </div>
                 </div>
-
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                    <li><a href="#community">Community</a></li>
-                    <li><a href="farm.html">Our Farm</a></li>
-                </ul>
-            </nav>
-            <!--end navbar-->
-        </header>
-
-
-
-        <!--landing background-->
-        <section class="landing" id="home">
-
-            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <div class="carousel-item">
+                    <img src="/images/2.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption caption-two d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
+                        <h5 data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
+                            <big>02</big>/<small>05</small></h5>
+                        <h2> Roses</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque adipisci nisi ipsum. Repudiandae sed eaque consequatur, laborum dolores, ab minima aliquid animi tempora porro maiores adipisci fugiat? Molestias, ullam.
+                        </p>
+                        <a href="roses.html" class="btn btn-two">Read More </a>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/9.jpg" class="d-block w-100" alt="..." />
-                        <div class="carousel-caption caption-one d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
-                            <h5><big>01</big>/<small>05</small></h5>
-                            <h2>Flowers</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perspiciatis iure mollitia aspernatur quaerat? Nam excepturi neque eos nulla asperiores ea eaque. Fugit et aperiam nostrum voluptates, illo odio incidunt.
-                            </p>
-                            <a href="/farm.html" class="btn btn-one">Read More</i></a>
-                        </div>
+                <div class="carousel-item">
+                    <img src="images/Our-Farm-Slider-2.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption caption-three d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
+                        <h5><big>03</big>/<small>05</small></h5>
+                        <h2>Hypericum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veniam magnam blanditiis nulla est id quasi praesentium odit optio officiis architecto magni saepe, a distinctio qui ipsam atque fuga minima.
+                        </p>
+                        <a href="hypericum.html" class="btn btn-three">Read More</a>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/images/2.jpg" class="d-block w-100" alt="..." />
-                        <div class="carousel-caption caption-two d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
-                            <h5 data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
-                                <big>02</big>/<small>05</small></h5>
-                            <h2> Roses</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque adipisci nisi ipsum. Repudiandae sed eaque consequatur, laborum dolores, ab minima aliquid animi tempora porro maiores adipisci fugiat? Molestias, ullam.
-                            </p>
-                            <a href="roses.html" class="btn btn-two">Read More </a>
-                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Social-Slider-5.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption caption-four d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
+                        <h5><big>04</big>/<small>05</small></h5>
+                        <h2>Society</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veniam magnam blanditiis nulla est id quasi praesentium odit optio officiis architecto magni saepe, a distinctio qui ipsam atque fuga minima.
+                        </p>
+                        <a href="#community" class="btn btn-four">Our Projects </i></a>
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/Our-Farm-Slider-2.jpg" class="d-block w-100" alt="..." />
-                        <div class="carousel-caption caption-three d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
-                            <h5><big>03</big>/<small>05</small></h5>
-                            <h2>Hypericum</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veniam magnam blanditiis nulla est id quasi praesentium odit optio officiis architecto magni saepe, a distinctio qui ipsam atque fuga minima.
-                            </p>
-                            <a href="hypericum.html" class="btn btn-three">Read More</i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/Social-Slider-5.jpg" class="d-block w-100" alt="..." />
-                        <div class="carousel-caption caption-four d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
-                            <h5><big>04</big>/<small>05</small></h5>
-                            <h2>Society</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veniam magnam blanditiis nulla est id quasi praesentium odit optio officiis architecto magni saepe, a distinctio qui ipsam atque fuga minima.
-                            </p>
-                            <a href="#community" class="btn btn-four">Our Projects </i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video id="video" loop muted class="embed-responsive-item" src="images/farm.mp4">
+                </div>
+                <div class="carousel-item ">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video id="video" loop muted class="embed-responsive-item" src="images/farm.mp4">
                     </div>
 
                     <div class="carousel-caption caption-five d-none d-md-block" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="linear">
@@ -466,7 +465,7 @@
 
     </footer>
     <!--end footer-->
-    </main>
+   
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous " async></script>
