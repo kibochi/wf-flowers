@@ -1,3 +1,3 @@
 # wf-flowers
 
-Website  <a href="wf-flowers.netlify.app">Wf Flowers</a>
+WEBSITE URL https://wf-flowers.netlify.app/
